@@ -1148,8 +1148,8 @@ const App = () => {
           <td>${item.name}</td>
           <td>${item.kg} kg <br/> (கிலோ)</td>
           <td>${item.grams} g<br/> (கிராம்)</td>
-          <td>${item.liters.toFixed(2)} L <br/>(லிட்டர்)</td>
-          <td>${item.milliliters.toFixed(2)} mL <br/>(மில்லி)</td>
+          <td>${item.liters} L <br/>(லிட்டர்)</td>
+          <td>${item.milliliters} mL <br/>(மில்லி)</td>
           <td>${item.qty} (எண்ணிக்கை)</td>
         </tr>
       `;
