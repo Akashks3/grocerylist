@@ -1096,7 +1096,10 @@ const GroceryList = () => {
   };
 
   const filteredGroceriesForSearch = groceries
-    .sort((a, b) => a.name.localeCompare(b.name)); 
+  .filter((item) =>
+    item.name.toLowerCase().includes(searchTerm.toLowerCase())
+  )
+  .sort((a, b) => a.name.localeCompare(b.name));
 
   const filteredCheckedGroceries = groceries.filter(item => item.checked);
 
@@ -1170,7 +1173,6 @@ const GroceryList = () => {
     <div className="container">
       <h1 className="title">Grocery List (கிரோசரி பட்டியல்)</h1>
 
-      {/* Search Filter */}
       <div className="search-filter">
         <label htmlFor="search" className="search-label">Search Grocery (பொருளை தேடு): </label>
         <input
@@ -1183,7 +1185,7 @@ const GroceryList = () => {
         />
       </div>
 
-      {/* Grocery List Table */}
+      
       <table className="grocery-table">
         <thead>
           <tr>
@@ -1260,7 +1262,7 @@ const GroceryList = () => {
         </tbody>
       </table>
 
-      {/* Filtered Items Section (Only Checked Items) */}
+      
       <h2 className="filtered-title">Filtered Items (தேர்ந்தெடுக்கப்பட்ட பொருட்கள்)</h2>
       {filteredCheckedGroceries.length > 0 ? (
         <table className="filtered-table">
@@ -1296,8 +1298,7 @@ const GroceryList = () => {
       ) : (
         <p className="no-items-message">No checked items found. Please check some items to filter.</p>
       )}
-
-      
+  
       <button className="download-btn" onClick={downloadFilteredData}>
         Download
       </button>
