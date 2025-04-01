@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css'; 
 
-const GroceryList = () => {
+const App = () => {
   const initialGroceryList = [
     {
       "id": 1,
@@ -1306,4 +1306,4 @@ const GroceryList = () => {
   );
 };
 
-export default GroceryList;
+export default App;
