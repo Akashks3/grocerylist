@@ -1080,7 +1080,7 @@ const App = () => {
 
   const [groceries, setGroceries] = useState(initialGroceryList);
   const [searchTerm, setSearchTerm] = useState(""); 
-
+  const [userName, setUserName] = useState(""); 
   const handleCheckboxChange = (id) => {
     const updatedGroceries = groceries.map((item) =>
       item.id === id ? { ...item, checked: !item.checked } : item
@@ -1128,6 +1128,7 @@ const App = () => {
           background-color: #ddd;
         }
       </style>
+      <h2>User: ${userName}</h2> 
       <table>
         <thead>
           <tr>
@@ -1172,6 +1173,19 @@ const App = () => {
   return (
     <div className="container">
       <h1 className="title">Grocery List (கிரோசரி பட்டியல்)</h1>
+
+    
+      <div className="search-field">
+        <label htmlFor="username">Enter Your Name: </label>
+        <input
+          type="text"
+          id="username"
+          value={userName}
+          onChange={(e) => setUserName(e.target.value)}
+          placeholder="Enter name..."
+          className="search-input"
+        />
+      </div>
 
       <div className="search-filter">
         <label htmlFor="search" className="search-label">Search Grocery (பொருளை தேடு): </label>
