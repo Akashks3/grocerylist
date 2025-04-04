@@ -3,7 +3,7 @@ import axios from "axios";
 import { v4 as uuidv4 } from "uuid";
 import "./App.css";
 
-const API_URL = "http://localhost:5002/groceries";
+const API_URL = "https://grocerybackend-twyp.onrender.com/groceries";
 
 const App = () => {
   const [groceries, setGroceries] = useState([]);
