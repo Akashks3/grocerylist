@@ -97,7 +97,7 @@ const App = () => {
     const tableContent = `
       <html>
       <head>
-        <title>Selected Electrical Items</title>
+        <title>Items</title>
         <style>
           body { font-family: Arial, sans-serif; padding: 20px; }
           table { border-collapse: collapse; width: 100%; }
@@ -264,7 +264,7 @@ const App = () => {
 
       {checkedGroceries.length > 0 && (
         <div className="selected-items">
-          <h2>Selected Electrical Items</h2>
+          <h2>Selected  Items</h2>
           <table border="1">
             <thead>
               <tr>
