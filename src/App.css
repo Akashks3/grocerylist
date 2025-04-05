@@ -1,4 +1,7 @@
-
+*{
+  align-items: center;
+  justify-content: center;
+}
 .search-field,
 .search-filter,
 .manual-filter {
@@ -98,8 +101,11 @@ button:hover {
 body {
   font-family: Arial, sans-serif;
   background-color: #f4f4f4;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
+  align-items: center;
+  justify-content: center;
+  justify-items: center;
 }
 
 .container {
